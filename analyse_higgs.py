@@ -8,7 +8,6 @@ BACKGROUND_DECAY = 50
 # Higgs signal peak
 SIGNAL_MU = 125.00000003290840
 
-
 def run_cern_analysis():
     print(f"Running analysis at {LHC_ENERGY_GEV} GeV...")
     background = np.random.exponential(scale=50, size=10000)
