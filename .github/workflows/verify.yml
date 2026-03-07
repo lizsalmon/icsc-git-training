@@ -1,0 +1,57 @@
+name: Quality Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  physics-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run physics analysis
+        run: |
+          python analyse_higgs.py > results.txt
+          cat results.txt
+
+      - name: Validate Higgs mass
+        run: |
+          if grep -q "PEAK_DETECTED_AT: 125.0 GeV" results.txt; then
+            echo "VALIDATED: HIGGS FOUND"
+          else
+            echo "FAILURE: MASS OFFSET DETECTED"
+            exit 1
+          fi
+
+      - name: Verify CERN beam energy unchanged
+        run: |
+          if grep -q "Running analysis at 13000 GeV" results.txt; then
+            echo "Beam energy validated"
+          else
+            echo "Beam energy modified!"
+            exit 1
+          fi
+
+      - name: Verify calibration fix was cherry-picked
+        run: |
+            if git log --pretty=%B | grep -q "calibration-fix"; then
+              echo "Calibration fix detected in history"
+            else
+              echo "Calibration fix NOT found. Cherry-pick required."
+              exit 1
+            fi
+
