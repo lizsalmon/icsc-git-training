@@ -1,0 +1,37 @@
+name: Scheduled PR merges
+
+on:
+    # - cron: "0 9 * * *"   # 09:00 UTC
+  workflow_dispatch:      # allow manual trigger
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+  merge-prs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Merge PR 1
+        run: gh pr merge 1 --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait 10 minutes
+        run: sleep 600
+
+      - name: Merge PR 2
+        run: gh pr merge 2 --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait 10 minutes
+        run: sleep 600
+
+      - name: Merge PR 3
+        run: gh pr merge 3 --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
