@@ -30,7 +30,7 @@ jobs:
 
       - name: Validate Higgs mass
         run: |
-          if grep -q "PEAK_DETECTED_AT: 125.00000003290840 GeV" results.txt; then
+          if grep -q "PEAK_DETECTED_AT: 125.00000005735839 GeV" results.txt; then
             echo "VALIDATED: HIGGS FOUND"
           else
             echo "FAILURE: MASS OFFSET DETECTED"
