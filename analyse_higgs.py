@@ -6,7 +6,7 @@ LHC_ENERGY_GEV = 13000
 BACKGROUND_DECAY = 50
 
 # Higgs signal peak
-SIGNAL_MU = 125.0
+SIGNAL_MU = 125.00000003290840
 
 
 def run_cern_analysis():
