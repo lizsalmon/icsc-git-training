@@ -2,6 +2,10 @@
 
 ## Getting Started
 
+1. I would recommend that you turn off your email notifications for failed workflows before starting this!
+    - Go to your icon, Settings, Notifications, scroll down to actions and deselect email from the "Notify me" drop down.
+    - You'll thank me later :) 
+
 1. **Clone this repository** to your local machine.
 
 2. Create a new branch using your name:
@@ -34,7 +38,7 @@ To complete the challenge you need to:
 git push origin <your-name>
 ```
 
-> 🚫 Please **do not push to `main`**.
+> Please **do not push to `main`**.
 
 ---
 
