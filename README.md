@@ -30,7 +30,7 @@ Below is an example of what a failing workflow might look like:
 
 To complete the challenge you need to:
 
-1. **Locate the required commit** on the calibration branch.
+1. **Locate the required commit** on the branch that is passing.
 2. **Cherry-pick that commit** into your branch.
 3. **Push your branch to the remote repository**.
 
