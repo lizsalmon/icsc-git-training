@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 LHC_ENERGY_GEV = 13000
 
 # Higgs signal peak
-SIGNAL_MU = 125.00000005324
+SIGNAL_MU = 125.00000006578
 
 def run_cern_analysis():
     print(f"Running analysis at {LHC_ENERGY_GEV} GeV...")
