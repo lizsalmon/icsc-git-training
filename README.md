@@ -18,7 +18,11 @@
 
    Click **Fork** in the top-right corner of the repository page.
 
-2. **Clone your fork** to your local machine.
+   You will need to unselect this box:
+<img width="500" height="113" alt="image" src="https://github.com/user-attachments/assets/ee9c58fb-4fa4-4b12-bde1-71a08e841afb" />
+
+
+3. **Clone your fork** to your local machine.
 
 ```
 git clone <your-fork-url>
