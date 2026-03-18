@@ -15,23 +15,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Merge PR 9
-        run: gh pr merge 9 --merge --admin
+      - name: Merge PR 1
+        run: gh pr merge 12 --merge --admin
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Wait 5 minutes
         run: sleep 300
 
-      - name: Merge PR 10
-        run: gh pr merge 10 --merge --admin
+      - name: Merge PR 2
+        run: gh pr merge 13 --merge --admin
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Wait 5 minutes
         run: sleep 300
 
-      - name: Merge PR 11
-        run: gh pr merge 11 --merge --admin
+      - name: Merge PR 3
+        run: gh pr merge 14 --merge --admin
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
