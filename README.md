@@ -41,13 +41,7 @@ git remote add upstream https://github.com/lizsalmon/icsc-git-training.git
 Create a new branch using your name:
 
 ```
-git switch -c <your-name>
-```
-
-Example:
-
-```
-git switch -c alice
+git switch -c <your-branch-name>
 ```
 
 You will work on this branch throughout the exercise.
@@ -72,7 +66,7 @@ To complete the challenge you need to:
 Push your branch:
 
 ```
-git push origin <your-name>
+git push origin <your-branch-name>
 ```
 
 ---
@@ -83,39 +77,20 @@ After pushing:
 
 1. Go to your **fork on GitHub**.
 2. Click **Compare & Pull Request**.
-3. Ensure the PR targets the **original repository's `main` branch**.
-
-Example:
-
-```
-your-username:your-name → upstream-repo:main
-```
+3. Ensure the PR targets the **original repository's `main` branch**. (`lizsalmon:main`) and the source is (`<your-username>:<your-branch-name>`)
 
 ---
 
 ## Keeping Your Branch Up to Date
 
-The `main` branch **changes every 5 minutes**.
+The `main` branch will **update every 5 minutes**.
 
 Before your PR can pass the workflow checks, your branch must be **up to date with `main`**.
 
-Fetch the latest changes from the upstream repository:
-
-```
-git fetch upstream
-```
-
-Update your branch:
-
-```
-git rebase upstream/main
-```
-
-Then push the updated branch to your fork:
-
-```
-git push --force-with-lease
-```
+You will need to:
+- Get the latest changes from the upstream repository (from `upstream/main`)
+- Update your branch (`rebase` or `merge`)
+- Then push the updated branch to your fork
 
 ---
 
