@@ -58,10 +58,11 @@ Below is an example of what a failing workflow looks like:
 
 To complete the challenge you need to:
 
-1. **Locate the required commit** on the branch that is passing.
-2. **Cherry-pick that commit** into your branch.
-3. **Push your branch to your fork**.
-4. **Create a pull request** from your fork into the original repository.
+1. **Locate the calibration commit** on the calibration branch.
+   - `git branch -a` may be helpful here
+3. **Cherry-pick that commit** into your branch.
+4. **Push your branch to your fork**.
+5. **Create a pull request** from your fork into the original repository.
 
 Push your branch:
 
@@ -69,9 +70,7 @@ Push your branch:
 git push origin <your-branch-name>
 ```
 
----
-
-## Creating the Pull Request
+### Creating the Pull Request
 
 After pushing:
 
@@ -79,9 +78,7 @@ After pushing:
 2. Click **Compare & Pull Request**.
 3. Ensure the PR targets the **original repository's `main` branch**. (`lizsalmon:main`) and the source is (`<your-username>:<your-branch-name>`)
 
----
-
-## Keeping Your Branch Up to Date
+### Keeping Your Branch Up to Date
 
 The `main` branch will **update every 5 minutes**.
 
@@ -92,9 +89,7 @@ You will need to:
 - Update your branch (`rebase` or `merge`)
 - Then push the updated branch to your fork
 
----
-
-## Important Notes
+### Important Notes
 
 - **Do not work directly on `main`.**
 - **Always work in your own branch.**
