@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-LHC_ENERGY_GEV = 13000
+LHC_ENERGY_GEV = 13500
 
 SIGNAL_MU = 125.0
 
