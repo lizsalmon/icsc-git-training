@@ -35,3 +35,19 @@ jobs:
         run: gh pr merge 14 --merge --admin
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait 5 minutes
+        run: sleep 300
+
+      - name: Merge PR 4
+        run: gh pr merge 18 --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Wait 5 minutes
+        run: sleep 300
+
+      - name: Merge PR 5
+        run: gh pr merge 19 --merge --admin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
