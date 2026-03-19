@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 LHC_ENERGY_GEV = 13000
 
-SIGNAL_MU = 125.0000003109
+SIGNAL_MU = 125.000000000432342
 
 def run_cern_analysis():
     print(f"Running analysis at {LHC_ENERGY_GEV} GeV...")
